@@ -1,7 +1,7 @@
+import styles from './page.module.css';
+
 export default function Home() {
 	return (
-		<main>
-			<h1>Start</h1>
-		</main>
+		<h1>Welcome on the homepage</h1>
 	);
 }
