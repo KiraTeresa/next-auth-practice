@@ -1,0 +1,17 @@
+.modalProvider {
+	position: absolute;
+	border: dashed green 1px;
+	top: 40px;
+	left: 0;
+	width: 100dvw;
+	height: 100dvh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.modal {
+		border: orange solid 1px;
+		border-radius: 5px;
+		padding: 15px;
+	}
+}
