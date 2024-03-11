@@ -3,8 +3,8 @@ import {Inter} from "next/font/google";
 import "./globals.css";
 import NavBarComponent from "@/app/components/nav-bar/nav-bar.component";
 import styles from "@/app/page.module.css";
-import ModalProvider from "@/app/components/modals/modal-provider/modal.provider";
 import LoginModalComponent from "@/app/components/modals/login-modal/login-modal.component";
+import { ModalProviderWrapper} from "@/app/context/ModalContext";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -18,13 +18,13 @@ export default function RootLayout({children,}: Readonly<{
 	return (
 		<html lang="en">
 		<body className={inter.className}>
-		<NavBarComponent/>
-		<main>
-			{children}
-		</main>
-		<ModalProvider>
+		<ModalProviderWrapper>
+			<NavBarComponent />
+			<main>
+				{children}
+			</main>
 			<LoginModalComponent/>
-		</ModalProvider>
+		</ModalProviderWrapper>
 		</body>
 		</html>
 	);

@@ -1,8 +1,12 @@
 'use client'
 
 import styles from './login-modal.module.scss';
+import {useContext} from "react";
+import {ModalContext} from "@/app/context/ModalContext";
 
 const LoginModalComponent = () => {
+	const {onClose} = useContext(ModalContext);
+
 	return (
 		<>
 			<form className={styles.loginForm}>
@@ -16,6 +20,7 @@ const LoginModalComponent = () => {
 				</section>
 				<button type="submit">login</button>
 			</form>
+			<button type="button" onClick={() => onClose()}>close</button>
 		</>
 	)
 }
