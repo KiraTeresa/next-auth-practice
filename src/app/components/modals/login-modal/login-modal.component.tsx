@@ -3,12 +3,14 @@
 import styles from './login-modal.module.scss';
 import {useContext} from "react";
 import {ModalContext} from "@/app/context/ModalContext";
+import SignInButtonComponent from "@/app/components/sign-in/sign-in-button.component";
 
 const LoginModalComponent = () => {
 	const {onClose} = useContext(ModalContext);
 
 	return (
 		<>
+			<SignInButtonComponent/>
 			<form className={styles.loginForm}>
 				<section>
 					<label htmlFor="username">Username</label>
