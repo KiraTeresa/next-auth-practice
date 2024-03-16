@@ -8,10 +8,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: #a19696;
+}
 
-	.modal {
-		border: orange solid 1px;
-		border-radius: 5px;
-		padding: 15px;
-	}
+.modal {
+	border: orange solid 1px;
+	border-radius: 5px;
+	padding: 15px;
 }

@@ -1,10 +1,10 @@
 'use client'
 
 import styles from './modal.module.scss';
-import { ModalType} from "@/app/context/ModalContext";
+import {ModalType} from "@/app/context/ModalContext";
 import LoginModalComponent from "@/app/components/modals/login-modal/login-modal.component";
 
-const ModalWrapper = ({openModal}: {openModal: ModalType}) => {
+const ModalWrapper = ({openModal}: { openModal: ModalType }) => {
 
 	const getModalComponent = () => {
 		switch (openModal) {
